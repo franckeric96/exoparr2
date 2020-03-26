@@ -4,7 +4,9 @@ from . import models
 
 from django.utils.safestring import mark_safe
 
-class SuiteAdmin(admin.ModelAdmin):
+from actions import Actions
+
+class SuiteAdmin(Actions):
     
     fieldsets = [
         ('Presentation',{'fields': ['image','nom']}),
@@ -25,7 +27,7 @@ class SuiteAdmin(admin.ModelAdmin):
 
                                                                                                                                   
     
-class ServiceAdmin(admin.ModelAdmin):
+class ServiceAdmin(Actions):
     
     fieldsets = [
         ('Presentation',{'fields': ['image','nom']}),
